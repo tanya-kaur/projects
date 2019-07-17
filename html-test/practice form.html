@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>form</title>
+</head>
+
+<body>
+    <form>
+        <select id="groups" name="groups">
+            <optgroup label="fruits">
+                <option>Banana</option>
+                <option selected>Cherry</option>
+                <option>Lemon</option>
+            </optgroup>
+            <optgroup label="vegetables">
+                <option>Carrot</option>
+                <option>Eggplant</option>
+                <option>Potato</option>
+            </optgroup>
+
+        </select>
+        <select multiple id="multi" name="multi">
+            <option>Banana</option>
+            <option>Cherry</option>
+            <option>Lemon</option>
+        </select>
+        <label for="myFruit">What's your favorite fruit?</label>
+        <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+        <datalist id="mySuggestion">
+            <option>Apple</option>
+            <option>Banana</option>
+            <option>Blackberry</option>
+            <option>Blueberry</option>
+            <option>Lemon</option>
+            <option>Lychee</option>
+            <option>Peach</option>
+            <option>Pear</option>
+        </datalist><br>
+        <input type="checkbox" check id="carrots" name="carrots" value="carrots">carrots
+        <input type="checkbox" check id="onion" name="onion" value="carrots">onion<br>
+        <fieldset>
+            <legend>What is your favorite meal?</legend>
+            <ul>
+                <li>
+                    <label for="soup">Soup</label>
+                    <input type="radio" checked id="soup" name="meal" value="soup">
+                </li>
+                <li>
+                    <label for="curry">Curry</label>
+                    <input type="radio" id="curry" name="meal" value="curry">
+                </li>
+                <li>
+                    <label for="pizza">Pizza</label>
+                    <input type="radio" id="pizza" name="meal" value="pizza">
+                </li>
+            </ul>
+        </fieldset>
+        <button type="submit">
+            <strong>submit</strong>
+        </button>
+        <input type="submit" value="submit">
+        <input type="number" name="age" id="age" min="1" max="10" step="1">
+        <input type="range" name="beans" id="beans" min="0" max="500" step="100">
+        <label for="beans">How many beans can you eat?</label>
+<input type="range" name="beans" id="beans" min="0" max="500" step="10">
+<input type="datetime-local" name="date-time" id="date-time">
+<input type="time" name="time" id="time">
+<input type="month" name="month" id="month">
+<input type="week" name="week" id="week"><br>
+<label for="myDate">When are you available this summer?</label>
+<input type="date" name="myDate" min="2019-05-01" max="2019-08-31" id="myDate"><br>
+<input type="color" name="color" id="color"><br>
+<input type="file" name="file" id="file" accept="file/*" multiple>
+<input type="hidden" id="timestamp" name="timestamp" value="1286705410">
+<input type="image" alt="click" src="image1.jpg" width="200" height="200" />
+<progress max="100" value="25">25/100</progress>
+<meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+
+
+    </form>
+</body>
+
+</html>

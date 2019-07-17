@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <style>
+        .calendar-wrapper {
+            font-family: 'Josefin Sans', sans-serif;
+
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .calendar {
+            width: 300px;
+            height: auto;
+            background: lightgrey;
+            box-sizing: border-box;
+        }
+
+        .calendar .date {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-gap: 10px;
+            box-sizing: border-box;
+
+        }
+
+        .calendar .date div {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            height: 25px;
+
+        }
+
+        .calendar .date div.day {
+
+            color: blue;
+            padding-top: 5px;
+        }
+
+        .calendar .date div.number {
+
+            color: blue;
+            padding-top: 5px;
+        }
+
+
+        .calendar .date div.number:nth-child(7n+1) {
+            color: red;
+            font-weight: 700;
+        }
+
+        .calendar .date div.number:hover {
+            background: white;
+            color: green;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .active{
+            background: peru;
+        }
+    </style>
+</head>
+
+<body style="background: url(bg1.jpg);">
+    <div class="calendar-wrapper">
+    <div class="calendar">
+        <div class="date">
+            <div class="day" style="color: red">S</div>
+            <div class="day">M</div>
+            <div class="day">T</div>
+            <div class="day">W</div>
+            <div class="day">T</div>
+            <div class="day">F</div>
+            <div class="day">S</div>
+            <div class="number active">1</div>
+            <div class="number">2</div>
+            <div class="number">3</div>
+            <div class="number">4</div>
+            <div class="number">5</div>
+            <div class="number">6</div>
+            <div class="number">7</div>
+            <div class="number">8</div>
+            <div class="number">9</div>
+            <div class="number">10</div>
+            <div class="number">11</div>
+            <div class="number">12</div>
+            <div class="number">13</div>
+            <div class="number">14</div>
+            <div class="number">15</div>
+            <div class="number">16</div>
+            <div class="number">17</div>
+            <div class="number">18</div>
+            <div class="number">19</div>
+            <div class="number">20</div>
+            <div class="number">21</div>
+            <div class="number">22</div>
+            <div class="number">23</div>
+            <div class="number">24</div>
+            <div class="number">25</div>
+            <div class="number">26</div>
+            <div class="number">27</div>
+            <div class="number">28</div>
+            <div class="number">29</div>
+            <div class="number">30</div>
+        </div>
+    </div>
+</div>
+    
+</body>
+
+</html>

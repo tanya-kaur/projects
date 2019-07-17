@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Effects</title>
+    </head>
+    <body>
+        <h1>IMAGES</h1>
+        <img src="image1.jpg"><br>
+        <audio controls>
+            <source src="audio1.mp3" type="audio/mp3"/>
+        </audio>
+        <video controls> <source src="11.mp4" type="video/mp4"/></video>
+        <script>
+
+        document.querySelector('video').addEventListener('mouseover', playVideo, false);
+
+        async function playVideo(){
+            await document.querySelector('video').play();
+        }
+        </script>
+    </body>
+</html>

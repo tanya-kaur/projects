@@ -1,0 +1,18 @@
+- html is case-insensitive language.
+DOCTYPE refers to the version of html(html5)
+To format the html code use alt+shift+F
+We use some tags just for the semantics like h1,2,3,4,5,6 or header, footer and so on. 
+image link- example(<a href="http://www.google.com/>
+<img src="11.jpg"></a>)
+entities having starting and ending are containers and the entities that do not have an end are called empty.
+Structure of html page:
+header:<header>
+navigation bar:<nav>{used to describe menu bar}
+main content:<main> with various content subsections represented by <article>,<section>,<div> elements.
+sidebar:<aside>{placed inside <main>}
+footer: <footer>
+border: 2px solid black{this is called short-hand technique.}
+color patterns used in css: rgb, rgba, #rgb, #rrggbb.
+to calculate width, formula is {width calc(90%-15px)}.
+instead of float we generally use flexbox and grid for layout purpose.
+!important is used in rare cases. We usually go with priority{inline-(internal-external)}.

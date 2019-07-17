@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para1">first para</p>
+    <p id="para2">second para</p>
+    <button id="btn">swap</button>
+    <script>
+        document.querySelector('#btn').onclick = function(){
+            var para1 = document.querySelector('#para1').textContent;
+            var para2 = document.querySelector('#para2').textContent;
+
+            document.querySelector('#para1').textContent = para2;
+            document.querySelector('#para1').textContent = para2;    
+        }
+    </script>
+</body>
+</html>

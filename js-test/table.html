@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<html>
+
+<head>
+    <title>table</title>
+    <style>
+        table tr td {
+            text-align: center;
+            width: 35px;
+            height: 35px;
+            border: 1px solid black;
+        }
+
+        table tr td:hover {
+            cursor: default;
+        }
+
+        #output {
+            text-align: right;
+            padding: 0 5px;
+            background: white;
+
+        }
+
+        table tr td:nth-child(2n) {
+            background-color: #eeeeee;
+        }
+
+        table tr td:nth-child(2n+1) {
+            background-color: #cccccc;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>calculator</h1>
+    <form name="calc">
+        <table>
+            <tr>
+                <td colspan="4" id="output"></td>
+            </tr>
+            <tr>
+                <td id="percent">%</td>
+                <td>&#8730;</td>
+                <td id="square">x<sup>2</sup></td>
+                <td id="fraction">1/x</td>
+            </tr>
+            <tr>
+                <td>CE</td>
+                <td id="clear">C</td>
+                <td id="backspace">&larr;</td>
+                <td class="copy">/</td>
+
+            </tr>
+            <tr>
+                <td class="copy">7</td>
+                <td class="copy">8</td>
+                <td class="copy">9</td>
+                <td class="copy">*</td>
+            </tr>
+            <tr>
+                <td class="copy">4</td>
+                <td class="copy">5</td>
+                <td class="copy">6</td>
+                <td class="copy">-</td>
+
+            </tr>
+            <tr>
+                <td class="copy">1</td>
+                <td class="copy">2</td>
+                <td class="copy">3</td>
+                <td class="copy">+</td>
+            </tr>
+            <tr>
+                <td>&plusmn;</td>
+                <td class="copy">0</td>
+                <td class="copy">.</td>
+                <td id="calculate-result">=</td>
+            </tr>
+        </table>
+
+    </form>
+    <script>
+        document.querySelectorAll("td.copy").forEach(function (el) {     //for output 
+            el.onclick = function (el) {
+                document.querySelector("#output").textContent += this.textContent;
+            };
+        });
+        document.getElementById("clear").onclick = function () {   //clear the screen
+            document.querySelector("#output").textContent = "";
+        };
+        //to calculate result
+        document.getElementById("calculate-result").onclick = function () {
+            try {
+                document.querySelector("#output").textContent = eval(document.querySelector("#output").textContent);
+            }
+            catch (e) {
+                document.querySelector("#output").textContent = "error";
+            }
+        }
+        document.getElementById("backspace").onclick = function () {
+
+            var value = document.querySelector("#output").textContent;
+            document.querySelector("#output").textContent = value.substring(0, value.length - 1);
+
+        }
+        document.getElementById("square").onclick = function () {
+            try {
+                var n = document.querySelector("#output").textContent;
+                document.querySelector("#output").textContent = n * n;
+            }
+            catch (e) {
+                document.querySelector("#output").textContent = "error";
+            }
+        }
+        document.getElementById("fraction").onclick = function () {
+            try {
+                var n = document.querySelector("#output").textContent;
+                document.querySelector("#output").textContent = 1 / n;
+            }
+            catch (e) {
+                document.querySelector("#output").textContent = "error";
+            }
+        }
+        document.getElementById("percent").onclick = function () {
+            try {
+                var num, per;
+                //  var a, b, n;
+                //n=a/b;
+                //n=document.querySelector("#output").textContent;
+                // document.querySelector("#output").textContent= n*100%;
+                function percentage(num, per) {
+                    return (num / 100) * per;
+                }
+            }
+            catch (e) {
+                document.querySelector("#output").textContent = "error";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="one1"></p>
+    <p id="two"></p>
+     <input id="age" value="18"/>
+     <button onclick="ageFunction()">try it</button>
+    <button onclick="pushFunction()">submit</button>
+    <script>
+        var car = ["BMW", "volvo", "echo"];
+        document.getElementById("demo").innerHTML = car.length + "<br> " + car.sort();
+        //   var fruits= ["mango", "grapes", "guava"];
+        //  var text="<h1>";
+        //  fruits.forEach(myFunction);
+        // text+= "</h1>";
+        //function  myFunction(value){
+        //    text+= value + "<br>";
+        //  document.getElementById("one").innerHTML=text;
+        // }
+        var number = ["one", " two", "three"];
+        document.getElementById("one1").innerHTML = number;
+            function pushFunction()
+            {
+                number.push("four");
+            
+            document.getElementById("one1").innerHTML=number;
+            }
+           
+            function ageFunction(){
+                var age,voteable;
+            age=document.getElementById("age").value;
+               
+                voteable = (age < 18) ? "Too young":"Old enough";
+  document.getElementById("demo").innerHTML = voteable + " to vote.";
+}
+               
+    </script>
+</body>
+
+</html>

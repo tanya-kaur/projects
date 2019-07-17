@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+
+        .product {
+            border: 1px solid #eee;
+        }
+
+        @media (max-width: 768px) {
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .products {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="products">
+        <div class="product">
+            <figure>
+                <img src="">
+                <figcaption>Product 1</figcaption>
+            </figure>
+        </div>
+        <div class="product">
+            <figure>
+                <img src="">
+                <figcaption>Product 1</figcaption>
+            </figure>
+        </div>
+
+        <div class="product">
+            <figure>
+                <img src="">
+                <figcaption>Product 1</figcaption>
+            </figure>
+        </div>
+        <div class="product">
+            <figure>
+                <img src="">
+                <figcaption>Product 1</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="product col-sm-4">
+                <figure>
+                    <img src="">
+                    <figcaption>Product 1</figcaption>
+                </figure>
+            </div>
+            <div class="product col-sm-4">
+                <figure>
+                    <img src="">
+                    <figcaption>Product 2</figcaption>
+                </figure>
+            </div>
+
+            <div class="product col-sm-4">
+                <figure>
+                    <img src="">
+                    <figcaption>Product 3</figcaption>
+                </figure>
+            </div>
+            <div class="product col-sm-4">
+                <figure>
+                    <img src="">
+                    <figcaption>Product 4</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.querySelector('.product').onclick = function(){
+        var r  = Math.random()*255,  g  = Math.random()*255,  b  = Math.random()*255;
+        this.style.backgroundColor = "rgb("+r+","+g+","+b+")";
+    }
+
+    setInterval(function(){
+        var r  = Math.random()*255,  g  = Math.random()*255,  b  = Math.random()*255;
+        document.querySelector('.product').style.backgroundColor = "rgb("+r+","+g+","+b+")";
+    }, 1000);
+    </script>
+</body>
+
+</html>

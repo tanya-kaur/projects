@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #main {
+            width: 200px;
+            height: 200px;
+            background: burlywood;
+
+        }
+
+        .border-left {
+            border-left: 1px solid #000000;
+        }
+
+        .border-right {
+            border-right: 1px solid #000000;
+        }
+
+        .border-top {
+            border-top: 1px solid #000000;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main"></div>
+    <script>
+        var count = 0;
+        document.getElementById("main").onclick = function () {
+            count++;
+            switch (count) {
+                case 1:
+                    this.classList.add('border-left')
+                    break;
+                case 2:
+                    this.classList.add('border-top')
+                    break;
+                case 3:
+                    this.classList.add('border-right')
+                    break;
+                case 4:
+                    this.classList.add('border-bottom')
+                    break;
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
